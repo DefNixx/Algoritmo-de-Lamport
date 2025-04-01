@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: rgb(201, 191, 191);
+}
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+}
+.processo {
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 10px;
+}
+button {
+    margin-top: 10px;
+    padding: 10px;
+    cursor: pointer;
+}

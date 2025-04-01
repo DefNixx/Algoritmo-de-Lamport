@@ -1,0 +1,36 @@
+<!DOCTYPE html> 
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmo de Lamport</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Simulador do Algoritmo de Lamport</h1>
+    <div class="container">
+        <div class="processo" id="p1">
+            <h2>P1</h2>
+            <p>⏳ <span id="clock1">0</span></p>
+            <button class="enviar" onclick="enviarMensagem(1, 2)">Enviar para P2</button>
+            <button class="enviar" onclick="enviarMensagem(1, 3)">Enviar para P3</button>
+            <ul id="logP1" class="log" style="max-height: 200px; overflow-y: auto;"></ul>
+        </div>
+        <div class="processo" id="p2">
+            <h2>P2</h2>
+            <p>⏳ <span id="clock2">0</span></p>
+            <button class="enviar" onclick="enviarMensagem(2, 1)">Enviar para P1</button>
+            <button class="enviar" onclick="enviarMensagem(2, 3)">Enviar para P3</button>
+            <ul id="logP2" class="log" style="max-height: 200px; overflow-y: auto;"></ul>
+        </div>
+        <div class="processo" id="p3">
+            <h2>P3</h2>
+            <p>⏳ <span id="clock3">0</span></p>
+            <button class="enviar" onclick="enviarMensagem(3, 1)">Enviar para P1</button>
+            <button class="enviar" onclick="enviarMensagem(3, 2)">Enviar para P2</button>
+            <ul id="logP3" class="log" style="max-height: 200px; overflow-y: auto;"></ul>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
